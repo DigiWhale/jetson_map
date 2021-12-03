@@ -6,7 +6,7 @@ const getDataFiles = () => {
   fs.readdir(dataFolder, (err, files) => {
     files.forEach(file => {
       if (!file.includes('._')) {
-        console.log(file);
+        console.log(dataFolder + file);
         var geoJson = csv2geojson.csv2geojson(dataFolder + file, function(err, data) {
           console.log(data)
         });

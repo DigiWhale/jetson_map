@@ -4,7 +4,10 @@ const fs = require('fs');
 const getDataFiles = () => {
   fs.readdir(dataFolder, (err, files) => {
     files.forEach(file => {
-      console.log(file);
+      if (!file.includes('._')) {
+        console.log(file);
+      }
+      // console.log(file);
     });
   });
 };

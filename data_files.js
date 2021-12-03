@@ -1,4 +1,4 @@
-const dataFolder = '/home/msrs/msrs_jetson/log_maps';
+const dataFolder = '/home/msrs/msrs_jetson/logs';
 const fs = require('fs');
 const csv2geojson = require('csv2geojson');
 

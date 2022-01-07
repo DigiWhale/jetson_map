@@ -24,6 +24,7 @@ const getValue = (keyword) => {
   // console.log('Connecting to redis');
   try {
         client.get(keyword, function(err, reply) {
+          console.log("reply", reply);
           return reply;
         });
     } catch (err) {

@@ -31,4 +31,4 @@ const getValue = (keyword) => {
     }
 };
 
-module.exports = connectDB, getValue;
+module.exports = {connectDB, getValue};

@@ -2,7 +2,7 @@ const path = require('path');
 const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
-require('./config/db');
+const database = require('./config/db');
 const getDataFiles = require('./data_files');
 
 // Load env variables
@@ -19,8 +19,8 @@ app.use(cors());
 const PORT = process.env.PORT || 5000;
 
 // Connect to database
-connectDB();
-getValue('rpi_lat');
+database.connectDB();
+database.getValue('rpi_lat');
 
 //get list of data files
 // getDataFiles()

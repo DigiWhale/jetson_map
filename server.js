@@ -29,7 +29,7 @@ app.listen(PORT, () => console.log(`Server running in ${process.env.NODE_ENV} mo
 app.get('/location', function (req, res) {
   database.getValue('jetson_rpi_lat').then(lat => {
     database.getValue('jetson_rpi_lng').then(lng => {
-      res.json({"lat":parseFloat(lat), "lon":parseFloat(lng)});
+      res.json({"lat":parseFloat(lat), "lng":parseFloat(lng)});
     })
   })
 })

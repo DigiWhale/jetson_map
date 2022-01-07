@@ -21,15 +21,12 @@ const connectDB = () => {
 };
 
 const getValue = (keyword) => {
-  try {
-    return new Promise((resv, rej) => {
-      client.get(keyword, (err, reply) => {
-        resv(reply);
-      });
-    })
-    } catch (err) {
-      console.log(err);
+  client.get(key, function(err,result){
+    if (err) {
+      return reject(err);
     }
+    return resolve(result);
+  });
 };
 
 module.exports = {connectDB, getValue};

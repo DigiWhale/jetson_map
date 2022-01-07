@@ -5,10 +5,10 @@ host = process.env.REDIS_HOST;
 port = process.env.REDIS_PORT;
 password = process.env.REDIS_PASSWORD;
 database = process.env.REDIS_DB;
+const client = new redis({port: port, host: host, password: password, db: database});
 
 const connectDB = () => {
   try {
-    const client = new redis({port: port, host: host, password: password, db: database});
     client.on('connect', () => {
       console.log('Redis connected.');
     });

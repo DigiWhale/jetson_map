@@ -30,5 +30,7 @@ app.listen(PORT, () => console.log(`Server running in ${process.env.NODE_ENV} mo
 app.get('/', function (req, res) {
   const lat = database.getValue('rpi_lat');
   const lng = database.getValue('rpi_lng');
+  console.log(lat);
+  console.log(lng);
   res.json({"lat":lat, "lon":lng})
 })

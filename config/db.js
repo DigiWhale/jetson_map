@@ -20,8 +20,8 @@ const connectDB = () => {
   }
 };
 
-const getValue = (key) => {
-  return new Promise((resv, rej) => {
+const getValue = async (key) => {
+  return await new Promise((resv, rej) => {
     client.get(key, (err, reply) => {
       resv(reply);
     });

@@ -20,6 +20,8 @@ const PORT = process.env.PORT || 5000;
 
 // Connect to database
 connectDB();
+getValue('rpi_lat');
+
 //get list of data files
 // getDataFiles()
 

@@ -24,7 +24,6 @@ const getValue = (keyword) => {
   try {
         client.get(keyword, function(err, reply) {
           console.log("reply", reply);
-        }).then(function(reply) {
           return reply;
         });
     } catch (err) {

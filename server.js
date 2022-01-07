@@ -19,8 +19,8 @@ app.use(cors());
 const PORT = process.env.PORT || 5000;
 
 // Connect to database
-// connectDB();
+connectDB();
 //get list of data files
-getDataFiles()
+// getDataFiles()
 
 app.listen(PORT, () => console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`));

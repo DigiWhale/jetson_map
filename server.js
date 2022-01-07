@@ -27,9 +27,7 @@ database.connectDB();
 app.listen(PORT, () => console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`));
 
 app.get('/', function (req, res) {
-  const lat = database.getValue('rpi_lat');
-  const lng = database.getValue('rpi_lng');
-  console.log(lat);
-  console.log(lng);
-  res.json({"lat":lat, "lon":lng})
+  database.getValue('rpi_lat').then(lat => {
+    res.json({"lat":lat, "lon":2})
+  })
 })

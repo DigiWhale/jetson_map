@@ -28,5 +28,5 @@ database.getValue('rpi_lat');
 app.listen(PORT, () => console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`));
 
 app.get('/', function (req, res) {
-  res.send('hello world')
+  res.send(database.getValue('rpi_lat'), database.getValue('rpi_lng'))
 })

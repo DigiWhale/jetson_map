@@ -20,7 +20,7 @@ const connectDB = () => {
   }
 };
 
-const getValue = (keyword) => {
+const getValue = (key) => {
   client.get(key, function(err,result){
     if (err) {
       return reject(err);

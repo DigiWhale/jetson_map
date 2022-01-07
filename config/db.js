@@ -22,11 +22,9 @@ const connectDB = () => {
 
 const getValue = (keyword) => {
   try {
-        val = client.get(keyword, function(err, reply) {
+        return client.get(keyword, function(err, reply) {
           console.log("reply", reply);
-          return reply;
-        });
-        return val;
+        })
     } catch (err) {
         console.log(err);
     }
